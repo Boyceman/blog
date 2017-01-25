@@ -14,4 +14,6 @@ app.use(async ctx => {
   ctx.body = 'Hello world!'
 })
 
-app.listen(80)
+app.listen(3000, () => {
+  console.log(new Date(), 'listening 3000')
+})
