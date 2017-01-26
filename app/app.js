@@ -1,8 +1,14 @@
 import Koa from 'koa'
+import logger from 'koa-logger'
+import vue from 'vue'
 const app = new Koa()
 
+if(process.env.NODE_ENV !== 'production'){
+  app.use(logger())
+}
 app.use(async (ctx, next) => {
   try {
+    if(ctx.path === '/favicon.ico') return
     await next()
   } catch (err) {
     ctx.body = {message: err.message}

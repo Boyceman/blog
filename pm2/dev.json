@@ -1,0 +1,20 @@
+{
+  "name": "blog",
+  "script": "./index.js",
+  "node_args": [
+    "--debug=3000"
+  ],
+  "watch": [
+    "app",
+    "client"
+  ],
+  "ignore_watch": [
+    "node_modules"
+  ],
+  "watch_options": {
+    "followSymlinks": false
+  },
+  "env": {
+    "NODE_ENV": "dev"
+  }
+}
